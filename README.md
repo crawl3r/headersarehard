@@ -4,13 +4,13 @@ Headers are indeed hard (apparently). As a pentester, I check these ALL the time
   
 These probably aren't as handy with bug bounties, but knowing how a user's browser may react based on the packet it receives might help identify impact or future attack steps. Regardless, here we are :)  
   
-### Installation  
+## Installation  
   
 ```
 go get github.com/crawl3r/headersarehard    
 ```
   
-### Usage  
+## Usage  
   
 ```
 skid@life:~$ echo "www.hackerone.com" | ./headersarehard -q -h secheaders.json 
@@ -30,11 +30,11 @@ skid@life:~$ echo "www.hackerone.com" | ./headersarehard -q -h secheaders.json
 [HTTPS]{V}  Server  
 ```
   
-Due to the output, we can easily grep for {S} or {V} based on the requirement of Security or Verbose headers.   
+Due to the output, we can easily grep for {S} or {V} based on the requirement of Security or Verbose headers.  
   
 Before raising these, please check the response packets to ensure what you are seeing here is legit. Just because the tool is printing them doesn't mean they are 'vulnerable' they may just be rocking a slightly different config as headers can make/break web application features. But y'all know that anyway... right?  
   
-### License  
+## License  
   
 I'm just a simple skid. Licensing isn't a big issue to me, I post things that I find helpful online in the hope that others can:  
 A) learn from the code  
